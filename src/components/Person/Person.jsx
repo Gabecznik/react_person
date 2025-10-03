@@ -6,15 +6,17 @@ export const Person = ({ person }) => {
   if (!isMarried) {
     partnerInfo = 'I am not married';
   } else if (sex === 'm') {
-    partnerInfo = `${partnerName} is my wife`;
+    partnerInfo = `My wife is ${partnerName}`;
   } else if (sex === 'f') {
-    partnerInfo = `${partnerName} is my husband`;
+    partnerInfo = `My husband is ${partnerName}`;
   }
+
+  const hasAge = typeof age !== 'undefined';
 
   return (
     <div className="Person">
       <p className="Person__name">My name is {name}</p>
-      {age && <p className="Person__age">I am {age}</p>}
+      {hasAge && <p className="Person__age">I am {age}</p>}
       <p className="Person__partner">{partnerInfo}</p>
     </div>
   );
