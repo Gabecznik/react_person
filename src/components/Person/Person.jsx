@@ -6,9 +6,9 @@ export const Person = ({ person }) => {
   if (!isMarried) {
     partnerInfo = 'I am not married';
   } else if (sex === 'm') {
-    partnerInfo = `My wife is ${partnerName}`;
+    partnerInfo = `${partnerName} is my wife`;
   } else if (sex === 'f') {
-    partnerInfo = `My husband is ${partnerName}`;
+    partnerInfo = `${partnerName} is my husband`;
   }
 
   const hasAge = typeof age !== 'undefined';
